@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifePath: Infinite Choices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LifePath: Infinite Choices</h1>
+
+        <!-- Character Customization -->
+        <section id="character-customization">
+            <h2>Create Your Character</h2>
+            <div class="character-preview">
+                <div id="characterAvatar"></div>
+            </div>
+            <form id="characterForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" min="50" max="250" required>
+                
+                <label for="eyeColor">Eye Color:</label>
+                <input type="color" id="eyeColor" value="#0000ff">
+                
+                <button type="button" onclick="startLife()">Start Life</button>
+            </form>
+        </section>
+
+        <!-- Status Bars -->
+        <section id="status-bars" style="display:none;">
+            <h2>Status</h2>
+            <div class="status-bar">
+                <label for="healthBar">Health</label>
+                <div id="healthBar" class="bar">
+                    <div id="healthFill" class="fill"></div>
+                </div>
+                <span id="healthValue">100</span>
+            </div>
+            <div class="status-bar">
+                <label for="happinessBar">Happiness</label>
+                <div id="happinessBar" class="bar">
+                    <div id="happinessFill" class="fill"></div>
+                </div>
+                <span id="happinessValue">100</span>
+            </div>
+            <div class="status-bar">
+                <label for="wealthBar">Wealth</label>
+                <div id="wealthBar" class="bar">
+                    <div id="wealthFill" class="fill"></div>
+                </div>
+                <span id="wealthValue">0</span>
+            </div>
+            <div class="status-bar">
+                <label for="ageBar">Age</label>
+                <div id="ageBar" class="bar">
+                    <div id="ageFill" class="fill"></div>
+                </div>
+                <span id="ageValue">0</span>
+            </div>
+        </section>
+
+        <!-- Activities -->
+        <section id="activities" style="display:none;">
+            <h2>What would you like to do?</h2>
+            <button onclick="performActivity('dating')">Go Dating</button>
+            <button onclick="performActivity('gambling')">Go Gambling</button>
+            <button onclick="performActivity('work')">Go to Work</button>
+            <button onclick="performActivity('volunteer')">Volunteer</button>
+            <button onclick="performActivity('retire')">Retire</button>
+        </section>
+
+        <!-- Conflict Handling -->
+        <section id="conflict-handling" style="display:none;">
+            <h2>Conflict Encountered</h2>
+            <button onclick="handleConflict('attack')">Attack</button>
+            <button onclick="handleConflict('insult')">Insult Back</button>
+            <button onclick="handleConflict('ignore')">Go with the Flow</button>
+            <button onclick="handleConflict('befriend')">Befriend</button>
+        </section>
+
+        <!-- Disease Event -->
+        <section id="disease-event" style="display:none;">
+            <h2>Disease Encountered</h2>
+            <button onclick="handleDisease('fight')">Fight</button>
+            <button onclick="handleDisease('ignore')">Ignore</button>
+            <button onclick="handleDisease('seekHelp')">Seek Help</button>
+        </section>
+
+        <!-- Random Event Pop-Up -->
+        <section id="random-event" style="display:none;">
+            <h2>Random Event</h2>
+            <p id="randomEventMessage"></p>
+            <button onclick="closeRandomEvent()">Okay</button>
+        </section>
+
+        <!-- End Game -->
+        <section id="end-game" style="display:none;">
+            <h2>Game Over</h2>
+            <p id="endMessage"></p>
+            <button onclick="restartGame()">Restart Game</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

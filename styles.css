@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.character-preview {
+    height: 100px;
+    width: 100px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form select {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.status-bar {
+    margin-bottom: 20px;
+}
+
+.bar {
+    background-color: #ddd;
+    border-radius: 10px;
+    height: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.fill {
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#healthBar {
+    background-color: #f5f5f5;
+}
+
+#healthFill {
+    background-color: #ff6f6f;
+}
+
+#happinessBar {
+    background-color: #f5f5f5;
+}
+
+#happinessFill {
+    background-color: #4caf50;
+}
+
+#wealthBar {
+    background-color: #f5f5f5;
+}
+
+#wealthFill {
+    background-color: #2196f3;
+}
+
+#ageBar {
+    background-color: #f5f5f5;
+}
+
+#ageFill {
+    background-color: #ffeb3b;
+}
+
+.status-bar label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.status-bar span {
+    display: block;
+    margin-top: 5px;
+    color: #333;
+}
+
+#random-event {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+#random-event button {
+    background-color: #2196f3;
+}
+
+#random-event button:hover {
+    background-color: #1976d2;
+}
